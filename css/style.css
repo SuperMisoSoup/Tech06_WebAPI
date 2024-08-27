@@ -1,0 +1,108 @@
+body {
+  background-color: aliceblue;
+}
+.wrap {
+  text-align: center;
+}
+/* =======スペース========= */
+.br_16px {
+  padding: 8px 0;
+}
+.br_24px {
+  padding: 12px 0;
+}
+.br_30px {
+  padding: 15px 0;
+}
+.br_40px {
+  padding: 20px 0;
+}
+.br_60px {
+  padding: 30px 0;
+}
+.br_80px {
+  padding: 40px 0;
+}
+
+
+
+/* =======入力欄========= */
+.box{
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(255, 213, 0);
+  margin: 50px 20px; /*箱の外の余白*/
+  border: solid 0.5px #333;
+  border-radius: 15px; /* 角の丸み */
+  justify-content: center; /* ボックスを中央寄せにする */
+}
+
+.list{
+  margin: 20px; /*箱内の文字との余白*/
+  border: dotted 0.5px #333;
+}
+
+.graph{
+  margin: 20px; /*箱内の文字との余白*/
+  background-color: rgb(255, 255, 0);
+  border: dotted 0.5px #333;
+}
+
+/* =======テーブル========= */
+.food_table *, .food_table *:before, .food_table *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.food_table {
+	width: 90%;
+	border-collapse: collapse;
+	border-right: 1px solid #dddddd;
+  margin: auto;
+}
+.food_table thead th {
+	padding: 10px 15px;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+	background: #dddddd;
+}
+.food_table thead th:last-child {
+	border-right: 1px solid #dddddd;
+}
+.food_table tbody th {
+	padding: 10px 15px;
+	border-bottom: 1px solid #ffffff;
+	background: #dddddd;
+	white-space: nowrap;
+}
+.food_table tbody tr:last-child th {
+	border-bottom: 1px solid #dddddd;
+}
+.food_table tbody td {
+	padding: 10px 15px;
+	vertical-align: top;
+	border-bottom: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	background: #ffffff;
+}
+@media only screen and (max-width:480px) {
+	.food_table thead {
+		display: none;
+	}
+	.food_table tbody th {
+		display: block;
+	}
+	.food_table tbody td {
+		display: block;
+		padding: 10px 5px;
+	}
+	.food_table tbody td::before {
+		font-weight: bold;
+		float: left;/*上のth要素が長い場合こちらを解除すると1段落下り見やすくなります*/
+		padding: 0.5em 0;
+		content: attr(label);
+	}
+	.food_table tbody td p {
+		padding: 0.5em 0 0 1em;
+    margin: 0;
+	}
+}
